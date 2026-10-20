@@ -1,6 +1,6 @@
 const NAMA_PANGGILAN = 'ijaz';
 const N = 47; 
-const gayajudul = 
+const gayajudul = {color: '1F3A5F' fontSize: '29px'}; 
 
 function App(){
   const jam = 9;
@@ -17,3 +17,17 @@ function App(){
   }
 }
 
+function DaftarMahasiswa() {
+const mahasiswa = [
+{ id: 1, nama: "Ani", nim: "10121001" },
+{ id: 2, nama: "Budi", nim: "10121002" },
+{ id: 3, nama: "Citra", nim: "10121003" },
+];
+return (
+<div>
+{mahasiswa.map((mhs) => (
+<CardMahasiswa key={mhs.id} nama={mhs.nama} nim={mhs.nim} />
+))}
+</div>
+);
+}
